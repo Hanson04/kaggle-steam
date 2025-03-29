@@ -51,14 +51,6 @@ plt.ylabel('Inertia')
 plt.title('Elbow Method for Optimal K')
 plt.show()
 
-# Silhouette Score Plot
-plt.figure(figsize=(8, 4))
-plt.plot(K_range, silhouette_scores, marker='s', linestyle='-')
-plt.xlabel('Number of Clusters (K)')
-plt.ylabel('Silhouette Score')
-plt.title('Silhouette Scores for Different K')
-plt.show()
-
 # Choose optimal K and apply KMeans
 optimal_k = 4
 kmeans = KMeans(n_clusters=optimal_k, random_state=42, n_init=10)
